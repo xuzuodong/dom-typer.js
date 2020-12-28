@@ -78,7 +78,7 @@ export default {
 
 ### Bold Style
 
-Bold text is also supported. What you need is to wrap the specific text part with `**`, just like Markdown syntax, and then the text rendered in your web-app will easily become bold style.
+Bold text is also supported. What you need is to wrap the specific text part with `**`, just like Markdown syntax, and then the text rendered in your web-app will become bold style.
 
 ```javascript
 const typer = new Typer("String that you want to **accent**. ");
