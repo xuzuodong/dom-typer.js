@@ -1,12 +1,16 @@
 {
   "name": "dom-typer",
   "version": "0.0.1",
-  "description": "模仿打字机的效果输出一串字符串",
+  "description": "Output a string with typer style",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "xuzuodong",
-  "license": "ISC"
+  "repository": "https://github.com/xuzuodong/dom-typer.js/tree/main",
+  "license": "ISC",
+  "dependencies": {
+    "marked": "^1.2.7"
+  }
 }
