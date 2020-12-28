@@ -1,12 +1,12 @@
 {
   "name": "dom-typer",
   "version": "0.0.2",
-  "description": "Output a string with typer style",
+  "description": "Output a string to DOM with typer style",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["typed", "typing", "typer"],
+  "keywords": ["typed", "typing", "typer", "dom"],
   "author": "xuzuodong",
   "repository": "https://github.com/xuzuodong/dom-typer.js/tree/main",
   "license": "ISC",
