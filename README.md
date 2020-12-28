@@ -12,7 +12,7 @@
 
 ```
 
-npm install dom-js --save
+npm install dom-typer --save
 
 ```
 
