@@ -1,0 +1,12 @@
+{
+  "name": "dom-typer",
+  "version": "0.0.1",
+  "description": "模仿打字机的效果输出一串字符串",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "xuzuodong",
+  "license": "ISC"
+}
