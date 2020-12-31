@@ -1,6 +1,6 @@
 {
   "name": "dom-typer",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Output a string to DOM with typer style",
   "main": "index.js",
   "scripts": {
@@ -17,5 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "marked": "^1.2.7"
-  }
+  },
+  "type": "module"
 }
