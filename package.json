@@ -1,6 +1,6 @@
 {
   "name": "dom-typer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Output a string to DOM with typer style",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,13 @@
   "repository": "https://github.com/xuzuodong/dom-typer.js/tree/main",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "marked": "^1.2.7"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8"
+  }
 }
