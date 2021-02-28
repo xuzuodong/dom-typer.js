@@ -15,6 +15,7 @@ class Typer {
         this.outputString = ''
         this.typing = false
         this.lexicalStructure = marked.lexer(str)
+        this.appendOutputText(this.lexicalStructure)
         this.pointer = [0, 0]
     }
 
@@ -27,14 +28,16 @@ class Typer {
         const nodesLength = this.lexicalStructure[0].tokens.length // 节点数量
         const currentNode = this.lexicalStructure[0].tokens[this.pointer[0]] // 当前节点
         const currentNodeIndex = this.pointer[0] // 当前是第几个节点
-        const currentTextLength = currentNode.text.length // 当前节点文本长度
+        let currentTextLength = currentNode.outputText.length // 当前节点文本长度
         const currentTextIndex = this.pointer[1] // 当前是文本的第几个字符
         this.typing = true
 
         if (currentNode.type == 'text') {
-            this.outputString += currentNode.text[currentTextIndex]
+            this.outputString += currentNode.outputText[currentTextIndex]
         } else if (currentNode.type == 'strong') {
-            this.outputString += `<strong>${currentNode.text[currentTextIndex]}</strong>`
+            this.outputString += `<strong>${currentNode.outputText[currentTextIndex]}</strong>`
+        } else if (currentNode.type == 'codespan') {
+            this.outputString += `<strong>${currentNode.outputText[currentTextIndex]}</strong>`
         }
 
         // 如果不在最后一个节点，也不是最后一个字符，则 pointer[1]++
@@ -74,6 +77,17 @@ class Typer {
             }
         }, this.speed)
     }
+
+    appendOutputText(lexicalStructure) {
+      lexicalStructure[0]?.tokens.forEach((token) => {
+          if (token.type == 'text' || token.type == 'strong') {
+              token.outputText = token.text
+          } else if (token.type == 'codespan') {
+              const slotText = this.slot[token.text]
+              token.outputText = slotText || ''
+          }
+      })
+  }
 }
 
 export default Typer
